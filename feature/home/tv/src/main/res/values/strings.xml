@@ -1,0 +1,4 @@
+<resources>
+    <string name="title_activity_main">Leanback MainActivity</string>
+    <string name="home_title">Show Home Screen</string>
+</resources>
