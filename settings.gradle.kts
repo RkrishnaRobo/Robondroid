@@ -27,3 +27,4 @@ include(":domain")
 include(":feature:home:mobile")
 include(":feature:home:tv")
 
+include(":feature:home:main")
