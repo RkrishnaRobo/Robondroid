@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -19,11 +20,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MobTV"
+rootProject.name = "Robondroid"
 include(":app")
-include(":core")
-include(":data")
-include(":domain")
 include(":feature:home:mobile")
 include(":feature:home:tv")
 
