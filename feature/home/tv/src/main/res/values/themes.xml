@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.MobTV" parent="@style/Theme.Leanback" />
+    <style name="Theme.MobTV" parent="Theme.MobTV" tools:ignore="ResourceCycle" />
 </resources>

@@ -19,7 +19,8 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
+// added to avoid re build issue
+gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
 rootProject.name = "Robondroid"
 include(":app")
 include(":feature:home:mobile")
