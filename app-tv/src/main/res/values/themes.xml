@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.Robondroid" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

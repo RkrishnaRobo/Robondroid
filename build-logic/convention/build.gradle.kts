@@ -21,7 +21,7 @@ dependencies {
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
-    compileOnly(libs.ktlint.gradlePlugin)
+    compileOnly(libs.detekt.gradlePlugin)
 }
 
 gradlePlugin {
@@ -38,7 +38,11 @@ gradlePlugin {
             id = "robondroid.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
-        register("robondroidCompose") {
+        register("robondroidJavaLibrary") {
+            id = "robondroid.java.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
+       register("robondroidCompose") {
             id = "robondroid.compose"
             implementationClass = "ComposeConventionPlugin"
         }
@@ -54,13 +58,9 @@ gradlePlugin {
             id = "robondroid.feature"
             implementationClass = "FeatureConventionPlugin"
         }
-        register("robondroidDestinations") {
-            id = "robondroid.destinations"
-            implementationClass = "DestinationsConventionPlugin"
-        }
-        register("robondroidKtLint") {
-            id = "robondroid.ktlint"
-            implementationClass = "KtLintConventionPlugin"
+        register("robondroidDetekt") {
+            id = "robondroid.detekt"
+            implementationClass = "AndroidDetektConventionPlugin"
         }
     }
 }

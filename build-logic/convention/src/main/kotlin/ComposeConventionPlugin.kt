@@ -1,4 +1,3 @@
-
 import com.android.build.gradle.BaseExtension
 import com.robondroid.configureAndroidCompose
 import org.gradle.api.Plugin
@@ -15,5 +14,4 @@ class ComposeConventionPlugin : Plugin<Project> {
             configureAndroidCompose(extension)
         }
     }
-
 }

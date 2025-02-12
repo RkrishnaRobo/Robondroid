@@ -1,6 +1,6 @@
-
 import com.android.build.api.dsl.LibraryExtension
 import com.robondroid.configureKotlinAndroid
+import com.robondroid.ext.implementation
 import com.robondroid.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -21,7 +21,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                add("implementation", libs.findLibrary("kotlinx-serialization-json").get())
+                implementation(libs.findLibrary("kotlinx-serialization-json").get())
             }
         }
     }

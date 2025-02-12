@@ -4,6 +4,8 @@ package com.robondroid
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
+import org.gradle.api.plugins.JavaPluginExtension
+import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.provideDelegate
 import org.gradle.kotlin.dsl.withType
@@ -36,6 +38,18 @@ internal fun Project.configureKotlinAndroid(
     }
 }
 
+/**
+ * Configure base Kotlin options for JVM (non-Android)
+ */
+internal fun Project.configureKotlinJvm() {
+    extensions.configure<JavaPluginExtension> {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    configureKotlin()
+}
+
 private fun Project.configureKotlin() {
     tasks.withType<KotlinCompile>().configureEach {
         compilerOptions {
@@ -44,10 +58,12 @@ private fun Project.configureKotlin() {
             // Override by setting warningsAsErrors=true in your ~/.gradle/gradle.properties
             val warningsAsErrors: String? by project
             allWarningsAsErrors.set(warningsAsErrors.toBoolean())
-            freeCompilerArgs.set(freeCompilerArgs.get() + listOf(
-                // Enable experimental coroutines APIs, including Flow
-                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-            ))
+            freeCompilerArgs.set(
+                freeCompilerArgs.get() + listOf(
+                    // Enable experimental coroutines APIs, including Flow
+                    "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                )
+            )
         }
     }
 }

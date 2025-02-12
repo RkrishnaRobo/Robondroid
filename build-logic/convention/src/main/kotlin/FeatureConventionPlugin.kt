@@ -1,5 +1,5 @@
-
 import com.android.build.gradle.LibraryExtension
+import com.robondroid.ext.implementation
 import com.robondroid.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -21,13 +21,11 @@ class FeatureConventionPlugin : Plugin<Project> {
                 }
             }
 
-
             dependencies {
-                //add("implementation", project(":core:theme"))
-
-                add("implementation", libs.findLibrary("androidx-hilt-navigation-compose").get())
-                add("implementation", libs.findLibrary("androidx-lifecycle-runtime-compose").get())
-                add("implementation", libs.findLibrary("lifecycle-viewModelCompose").get())
+                implementation(project(":core:design-system"))
+                implementation(libs.findLibrary("androidx-hilt-navigation-compose").get())
+                implementation(libs.findLibrary("androidx-lifecycle-runtime-compose").get())
+                implementation(libs.findLibrary("lifecycle-viewModelCompose").get())
             }
 
         }
