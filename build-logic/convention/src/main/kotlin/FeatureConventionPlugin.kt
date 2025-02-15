@@ -12,6 +12,7 @@ class FeatureConventionPlugin : Plugin<Project> {
             pluginManager.apply {
                 apply("robondroid.android.library")
                 apply("robondroid.hilt")
+                apply("robondroid.detekt")
             }
 
             extensions.configure<LibraryExtension> {

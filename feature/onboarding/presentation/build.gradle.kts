@@ -7,5 +7,7 @@ android {
 }
 
 dependencies {
-
+    api(projects.core.common.general)
+    implementation(projects.core.domain.onboarding)
+    implementation(projects.core.data.onboarding)
 }

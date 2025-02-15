@@ -1,0 +1,60 @@
+package com.feature.onboarding.ui.main
+
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.core.designsystem.theme.RobondroidTheme
+import com.core.ui.component.loader.CommonLoader
+import com.feature.onboarding.presentation.state.OnboardState
+import com.feature.onboarding.presentation.viewmodel.OnboardViewModelImpl
+
+@Composable
+internal fun OnboardScreen(
+    modifier: Modifier = Modifier,
+    viewModel: OnboardViewModelImpl = hiltViewModel()
+) {
+    val state by viewModel.state.collectAsStateWithLifecycle(initialValue = OnboardState.None)
+    OnboardScreenRouter(modifier.fillMaxSize(), state)
+}
+
+@Composable
+fun OnboardScreenRouter(
+    modifier: Modifier = Modifier,
+    state: OnboardState
+) {
+    when (state) {
+        OnboardState.Loading -> CommonLoader(modifier)
+        is OnboardState.Content -> OnboardContent(modifier, state)
+        OnboardState.Error,
+        OnboardState.None -> Unit
+    }
+}
+
+@Composable
+fun OnboardContent(
+    modifier: Modifier = Modifier,
+    state: OnboardState.Content
+) {
+    Text(
+        modifier = modifier,
+        text = state.text,
+        style = MaterialTheme.typography.bodyLarge
+    )
+}
+
+@Preview
+@Composable
+@Preview(showBackground = true)
+private fun OnboardScreenPreview() {
+    RobondroidTheme {
+        OnboardScreenRouter(state = OnboardState.Content(text = "Hello Mobile"))
+    }
+}
+
+

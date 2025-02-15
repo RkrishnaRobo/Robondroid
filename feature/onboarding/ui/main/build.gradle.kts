@@ -8,5 +8,6 @@ android {
 }
 
 dependencies {
-
+    implementation(projects.feature.onboarding.presentation)
+    implementation(projects.core.ui)
 }

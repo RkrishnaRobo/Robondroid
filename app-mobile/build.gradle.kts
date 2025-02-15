@@ -50,4 +50,5 @@ android {
 dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(projects.core.designSystem)
+    implementation(projects.core.common.navigation)
 }

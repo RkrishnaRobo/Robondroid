@@ -28,7 +28,7 @@ internal fun Project.configureAndroidCompose(
             add("implementation", libs.findLibrary("androidx-compose-animation").get())
             add("implementation", libs.findLibrary("androidx-compose-material-icons-extended").get())
             add("implementation", libs.findLibrary("androidx-compose-material3").get())
-
+            add("implementation", libs.findLibrary("androidx-navigation-compose").get())
             // tv
             add("implementation", libs.findLibrary("androidx-tv-material").get())
         }

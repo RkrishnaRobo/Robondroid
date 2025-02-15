@@ -23,14 +23,4 @@ abstract class OnboardDataModule {
 
     @Binds
     abstract fun bindOnBoardingRepository(onboardingRepository: OnboardingRepositoryImpl): OnboardingRepository
-
-    /* companion object {
-
-         @Provides
-         fun provideOnBoardingRepository(
-             ioDispatcher: CoroutineDispatcher,
-             onboardDataSource: OnboardDataSource,
-             jokeNetToJokeMapper: JokeNetToJokeMapper
-         ): OnboardingRepository = OnboardingRepositoryImpl(ioDispatcher, onboardDataSource, jokeNetToJokeMapper)
-     }*/
 }

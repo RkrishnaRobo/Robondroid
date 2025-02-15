@@ -7,7 +7,7 @@ plugins {
 
 dependencies {
     api(projects.core.network)
-    implementation(projects.core.common.general)
+    api(projects.core.common.general)
     implementation(projects.core.domain.onboarding)
     implementation(projects.core.data.general)
     implementation(libs.kotlinx.serialization.json)

@@ -11,7 +11,10 @@ import com.core.designsystem.shape.AppShapes
 import com.core.designsystem.spacing.AppSpacing
 
 @Composable
-fun PrimaryButton(onClick: () -> Unit, text: String) {
+fun PrimaryButton(
+    onClick: () -> Unit, text: String,
+    modifier: Modifier = Modifier
+) {
     Button(
         onClick = onClick,
         colors = ButtonDefaults.buttonColors(
@@ -19,7 +22,7 @@ fun PrimaryButton(onClick: () -> Unit, text: String) {
             contentColor = AppColors.OnPrimary
         ),
         shape = AppShapes.Medium,
-        modifier = Modifier.padding(AppSpacing.Small)
+        modifier = modifier.padding(AppSpacing.Small)
     ) {
         Text(text)
     }
