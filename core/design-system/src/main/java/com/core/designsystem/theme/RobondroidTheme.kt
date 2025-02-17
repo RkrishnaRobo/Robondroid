@@ -8,7 +8,6 @@ import com.core.designsystem.color.AppColors
 import com.core.designsystem.shape.AppShapesMaterial
 import com.core.designsystem.typography.AppTypography
 
-
 private val LightColors = lightColorScheme(
     primary = AppColors.Primary,
     secondary = AppColors.Secondary,

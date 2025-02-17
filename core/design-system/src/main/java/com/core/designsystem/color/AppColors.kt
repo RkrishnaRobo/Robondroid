@@ -2,6 +2,7 @@ package com.core.designsystem.color
 
 import androidx.compose.ui.graphics.Color
 
+@Suppress("MagicNumber")
 object AppColors {
     val Primary = Color(0xFF6200EE)
     val Secondary = Color(0xFF3700B3)

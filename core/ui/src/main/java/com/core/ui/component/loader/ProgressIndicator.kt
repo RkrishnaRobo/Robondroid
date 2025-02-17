@@ -1,5 +1,4 @@
 package com.core.ui.component.loader
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.zIndex
 import com.core.designsystem.theme.RobondroidTheme
 
+@Suppress("MagicNumber")
 @Composable
 fun CommonLoader(
     modifier: Modifier = Modifier
@@ -29,9 +29,8 @@ fun CommonLoader(
 
 @Preview
 @Composable
-@Preview(showBackground = true)
-fun PreviewCommonLoader() {
+private fun PreviewCommonLoader() {
     RobondroidTheme {
-        CommonLoader(Modifier)
+        CommonLoader()
     }
 }

@@ -1,7 +1,6 @@
 package com.feature.onboarding.presentation.viewmodel
 
 import androidx.lifecycle.viewModelScope
-import com.core.domain.onboarding.repository.OnboardingRepository
 import com.core.domain.onboarding.usecase.GetRandomJokesUseCase
 import com.feature.onboarding.presentation.state.OnboardAction
 import com.feature.onboarding.presentation.state.OnboardReducer
