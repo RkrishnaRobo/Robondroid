@@ -20,17 +20,17 @@ internal fun OnboardScreen(
     viewModel: OnboardViewModelImpl = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle(initialValue = OnboardState.None)
-    OnboardScreenRouter(modifier.fillMaxSize(), state)
+    OnboardScreenRouter(state, modifier.fillMaxSize())
 }
 
 @Composable
 fun OnboardScreenRouter(
-    modifier: Modifier = Modifier,
-    state: OnboardState
+    state: OnboardState,
+    modifier: Modifier = Modifier
 ) {
     when (state) {
         OnboardState.Loading -> CommonLoader(modifier)
-        is OnboardState.Content -> OnboardContent(modifier, state)
+        is OnboardState.Content -> OnboardContent(state, modifier)
         OnboardState.Error,
         OnboardState.None -> Unit
     }
@@ -38,8 +38,8 @@ fun OnboardScreenRouter(
 
 @Composable
 fun OnboardContent(
-    modifier: Modifier = Modifier,
-    state: OnboardState.Content
+    state: OnboardState.Content,
+    modifier: Modifier = Modifier
 ) {
     Text(
         modifier = modifier,
@@ -56,5 +56,3 @@ private fun OnboardScreenPreview() {
         OnboardScreenRouter(state = OnboardState.Content(text = "Hello Mobile"))
     }
 }
-
-

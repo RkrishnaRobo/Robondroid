@@ -6,7 +6,6 @@ import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import com.feature.onboarding.ui.main.OnboardScreen
 import kotlinx.serialization.Serializable
-
 @Serializable
 data object OnboardScreenRoute
 

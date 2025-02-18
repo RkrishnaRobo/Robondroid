@@ -9,8 +9,8 @@ import com.feature.onboarding.ui.main.navigation.onboardScreen
 
 @Composable
 fun NavigationHost(
-    modifier: Modifier = Modifier,
     navController: NavHostController,
+    modifier: Modifier = Modifier,
     startDestinationScreen: Any = OnboardScreenRoute
 ) {
     NavHost(

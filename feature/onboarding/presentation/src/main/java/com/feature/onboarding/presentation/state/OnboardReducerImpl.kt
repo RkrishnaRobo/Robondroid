@@ -4,7 +4,6 @@ import com.core.common.network.AppDispatchers
 import com.core.common.network.Dispatcher
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
@@ -30,16 +29,14 @@ class OnboardReducerImpl @Inject constructor(
     private fun onSetContent(action: OnboardAction.SetContent): OnboardState {
         return when (val state = state.value) {
             is OnboardState.Content ->
-                state.copy(text = updateState(action, state.text))
+                state.copy(text = updateState())
 
             else -> initialiseContent(action)
         }
     }
 
-    private fun updateState(
-        action: OnboardAction.SetContent,
-        currentState: String,
-    ): String {
+    @Suppress("FunctionOnlyReturningConstant")
+    private fun updateState(): String {
         return "Update state"
     }
 

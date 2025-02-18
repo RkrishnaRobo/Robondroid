@@ -7,7 +7,6 @@ import com.feature.onboarding.presentation.state.OnboardReducerImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Singleton
