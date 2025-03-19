@@ -12,14 +12,14 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.core.designsystem.theme.RobondroidTheme
 import com.core.ui.component.loader.CommonLoader
 import com.feature.onboarding.presentation.state.OnboardState
-import com.feature.onboarding.presentation.viewmodel.OnboardViewModelImpl
+import com.feature.onboarding.presentation.viewmodel.OnboardViewModel
 
 @Composable
 internal fun OnboardScreen(
     modifier: Modifier = Modifier,
-    viewModel: OnboardViewModelImpl = hiltViewModel()
+    viewModel: OnboardViewModel = hiltViewModel()
 ) {
-    val state by viewModel.state.collectAsStateWithLifecycle(initialValue = OnboardState.None)
+    val state by viewModel.uiState.collectAsStateWithLifecycle(initialValue = OnboardState.None)
     OnboardScreenRouter(state, modifier.fillMaxSize())
 }
 
