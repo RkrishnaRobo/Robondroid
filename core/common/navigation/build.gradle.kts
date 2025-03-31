@@ -8,5 +8,7 @@ android {
 }
 
 dependencies {
-    implementation(projects.feature.onboarding.ui.main)
+    implementation(projects.feature.register.ui.main)
+    implementation(projects.feature.signin.ui.main)
+    implementation(projects.feature.home.ui.main)
 }

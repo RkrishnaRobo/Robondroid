@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.robondroid.application)
     alias(libs.plugins.robondroid.compose)
     alias(libs.plugins.robondroid.hilt)
+    alias(libs.plugins.gms)
 }
 
 val applicationName: String = libs.versions.applicationName.get()

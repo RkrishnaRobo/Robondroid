@@ -53,7 +53,8 @@ youtubePlayer = "12.1.0"
 accompanist = "0.35.1-alpha"
 palette = "1.0.0"
 ktor_version = "2.3.12"
-firebase-auth = "23.1.0"
+firebase-auth = "23.2.0"
+gmsPlugin = "4.4.2"
 
 #Robondroid Provider library versions
 appcompat = "1.7.0"
@@ -66,6 +67,8 @@ json = "20240303"
 jsoup = "1.17.2"
 androidDesugarJdkLibs = "2.1.4"
 tvFoundation = "1.0.0-alpha12"
+firebaseAuthKtx = "23.2.0"
+firebaseCommonKtx = "21.0.0"
 
 [libraries]
 # SplashScreen API
@@ -195,6 +198,8 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 androidx-tv-foundation = { group = "androidx.tv", name = "tv-foundation", version.ref = "tvFoundation" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version.ref = "firebaseCommonKtx" }
 
 [plugins]
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -207,6 +212,7 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 room = { id = "androidx.room", version.ref = "room" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 
 
 # Plugins defined by this project

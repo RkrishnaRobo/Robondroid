@@ -4,20 +4,33 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import com.feature.onboarding.ui.main.navigation.OnboardScreenRoute
-import com.feature.onboarding.ui.main.navigation.onboardScreen
+import com.feature.home.ui.main.navigation.homeScreen
+import com.feature.home.ui.main.navigation.navigateToHome
+import com.feature.onboarding.ui.main.onboard.register.navigation.navigateToRegister
+import com.feature.onboarding.ui.main.onboard.register.navigation.registerScreen
+import com.feature.signin.ui.main.navigation.SignInScreenRoute
+import com.feature.signin.ui.main.navigation.navigateToSignIn
+import com.feature.signin.ui.main.navigation.signInScreen
 
 @Composable
 fun NavigationHost(
     navController: NavHostController,
     modifier: Modifier = Modifier,
-    startDestinationScreen: Any = OnboardScreenRoute
+    startDestinationScreen: Any = SignInScreenRoute
 ) {
     NavHost(
         modifier = modifier,
         navController = navController,
         startDestination = startDestinationScreen
     ) {
-        onboardScreen()
+        signInScreen(
+            navigateToRegister = navController::navigateToRegister,
+            navigateToHome = navController::navigateToHome
+        )
+        registerScreen(
+            navigateToLogin = navController::navigateToSignIn,
+            navigateToHome = navController::navigateToSignIn
+        )
+        homeScreen()
     }
 }
