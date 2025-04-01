@@ -14,5 +14,4 @@ class OnboardApiImpl @Inject constructor(
         val result = ktorClient.makeRequest(request, JokeNet::class)
         return result
     }
-
 }

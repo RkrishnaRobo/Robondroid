@@ -1,4 +1,4 @@
-package com.feature.onboarding.presentation.state.register
+package com.feature.home.presentation.state.register
 
 import RegistrationState
 import com.core.common.state.Reducer

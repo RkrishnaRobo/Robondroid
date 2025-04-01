@@ -1,4 +1,4 @@
-package com.feature.onboarding.presentation.state.register
+package com.feature.home.presentation.state.register
 
 import RegistrationState
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class RegisterReducerImpl @Inject constructor() : RegisterReducer {
     private val _state = MutableStateFlow(RegistrationState())
-    override val state =  _state.asStateFlow()
+    override val state = _state.asStateFlow()
 
     override suspend fun update(action: RegistrationAction) {
         when (action) {
@@ -47,6 +47,8 @@ class RegisterReducerImpl @Inject constructor() : RegisterReducer {
             RegistrationAction.ClearError -> {
                 _state.update { it.copy(errorMessage = null) }
             }
+
+            RegistrationAction.OnAlreadyHaveAccountClick -> Unit
         }
     }
 }

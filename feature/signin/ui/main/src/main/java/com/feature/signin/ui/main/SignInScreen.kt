@@ -1,5 +1,6 @@
 package com.feature.signin.ui.main
 
+import NavigationState
 import SignInState
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
@@ -62,6 +63,7 @@ fun SignInScreen(
 
         when (navigationState) {
             is NavigationState.NavigateToHome -> performNavigation(navigateToHome)
+            is NavigationState.NavigateToRegister -> performNavigation(navigateToRegister)
             else -> Unit
         }
     }
@@ -87,13 +89,12 @@ fun RegisterScreenContent(
         CommonLoader()
     } else {
         Column(
-            modifier = Modifier.verticalScroll(rememberScrollState()),
+            modifier = modifier.verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             LoginHeader()
             LoginForm(
-                modifier = modifier,
                 uiState = uiState,
                 emailFocusRequester = emailFocusRequester,
                 passwordFocusRequester = passwordFocusRequester,
@@ -103,6 +104,7 @@ fun RegisterScreenContent(
     }
 }
 
+@Suppress("LongMethod")
 @Composable
 fun LoginForm(
     uiState: SignInState,
@@ -116,7 +118,6 @@ fun LoginForm(
         modifier = modifier.padding(horizontal = 10.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-
         AnimatedVisibility(visible = uiState.errorMessage != null) {
             Text(
                 text = uiState.errorMessage ?: "",
@@ -206,5 +207,3 @@ private fun LoginHeader(modifier: Modifier = Modifier) {
         )
     }
 }
-
-

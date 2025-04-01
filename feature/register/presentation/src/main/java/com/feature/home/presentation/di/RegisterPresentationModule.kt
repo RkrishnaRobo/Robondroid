@@ -1,7 +1,7 @@
-package com.feature.onboarding.presentation.di
+package com.feature.home.presentation.di
 
-import com.feature.onboarding.presentation.state.register.RegisterReducer
-import com.feature.onboarding.presentation.state.register.RegisterReducerImpl
+import com.feature.home.presentation.state.register.RegisterReducer
+import com.feature.home.presentation.state.register.RegisterReducerImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -9,7 +9,7 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-object OnboardPresentationModule {
+object RegisterPresentationModule {
 
     @Provides
     fun provideRegistrationReducer(): RegisterReducer {

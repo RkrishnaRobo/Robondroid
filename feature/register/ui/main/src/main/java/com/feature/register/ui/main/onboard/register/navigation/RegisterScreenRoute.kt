@@ -1,10 +1,10 @@
-package com.feature.onboarding.ui.main.onboard.register.navigation
+package com.feature.register.ui.main.onboard.register.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.feature.onboarding.ui.main.onboard.register.RegisterScreen
+import com.feature.register.ui.main.onboard.register.RegisterScreen
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -25,4 +25,3 @@ fun NavGraphBuilder.registerScreen(
         )
     }
 }
-

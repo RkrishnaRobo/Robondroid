@@ -19,5 +19,4 @@ class OnboardDataSourceImpl @Inject constructor(
     override suspend fun firebaseLoginWithEmailAndPassword(email: String, password: String): AuthResult {
         return auth.signInWithEmailAndPassword(email, password).await()
     }
-
 }

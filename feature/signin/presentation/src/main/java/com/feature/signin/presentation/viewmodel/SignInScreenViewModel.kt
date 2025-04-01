@@ -31,6 +31,7 @@ class SignInScreenViewModel @Inject constructor(
         viewModelScope.launch {
             when (action) {
                 SignInAction.OnSignInClicked -> signInUser()
+                SignInAction.OnNotMemberClicked -> goToRegister()
                 else -> reducer.update(action)
             }
         }
@@ -38,6 +39,10 @@ class SignInScreenViewModel @Inject constructor(
 
     fun resetNavigation() {
         _navigationState.update { NavigationState.None }
+    }
+
+    private fun goToRegister() {
+        _navigationState.update { NavigationState.NavigateToRegister }
     }
 
     private suspend fun signInUser() {
@@ -56,7 +61,6 @@ class SignInScreenViewModel @Inject constructor(
                 }.onFailure { e ->
                     reducer.update(SignInAction.SignInFailed(e.localizedMessage ?: "SignIn failed"))
                 }
-
         }
     }
 
@@ -69,6 +73,4 @@ class SignInScreenViewModel @Inject constructor(
             else -> null
         }
     }
-
-
 }

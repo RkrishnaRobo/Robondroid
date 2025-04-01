@@ -14,5 +14,4 @@ interface OnboardDataSource {
         email: String,
         password: String,
     ): AuthResult
-
 }

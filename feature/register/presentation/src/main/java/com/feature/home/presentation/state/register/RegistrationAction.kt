@@ -1,4 +1,4 @@
-package com.feature.onboarding.presentation.state.register
+package com.feature.home.presentation.state.register
 
 import com.core.common.state.Action
 
@@ -11,5 +11,6 @@ sealed class RegistrationAction : Action {
     data object RegistrationStarted : RegistrationAction()
     data class RegistrationSuccess(val userId: String) : RegistrationAction()
     data class RegistrationFailed(val error: String) : RegistrationAction()
+    data object OnAlreadyHaveAccountClick : RegistrationAction()
     data object ClearError : RegistrationAction()
 }

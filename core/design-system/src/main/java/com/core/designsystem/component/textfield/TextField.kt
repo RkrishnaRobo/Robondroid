@@ -28,6 +28,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
+@Suppress("LongParameterList")
 @Composable
 fun DefaultTextField(
     value: String,
@@ -66,6 +67,7 @@ fun DefaultTextField(
     )
 }
 
+@Suppress("LongParameterList")
 @Composable
 fun PasswordTextField(
     value: String,
@@ -93,8 +95,11 @@ fun PasswordTextField(
                 ) {
                     Icon(
                         imageVector =
-                        if (passwordVisibility) Icons.Outlined.Visibility
-                        else Icons.Outlined.VisibilityOff,
+                        if (passwordVisibility) {
+                            Icons.Outlined.Visibility
+                        } else {
+                            Icons.Outlined.VisibilityOff
+                        },
                         contentDescription = null
                     )
                 }
@@ -110,4 +115,3 @@ fun PasswordTextField(
         visualTransformation = if (passwordVisibility) VisualTransformation.None else PasswordVisualTransformation()
     )
 }
-

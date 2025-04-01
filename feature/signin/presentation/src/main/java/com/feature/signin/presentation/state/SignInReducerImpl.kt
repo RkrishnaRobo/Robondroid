@@ -6,8 +6,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
-class SignInReducerImpl @Inject constructor(
-) : SignInReducer {
+class SignInReducerImpl @Inject constructor() : SignInReducer {
     private val _state = MutableStateFlow(SignInState())
     override val state = _state.asStateFlow()
 

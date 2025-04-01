@@ -8,10 +8,15 @@ data class SignInState(
     val errorMessage: String? = null
 ) : State {
     val isValidEmail: Boolean get() = Patterns.EMAIL_ADDRESS.matcher(email).matches()
-    val isValidPassword: Boolean get() = password.length >= 6
+    val isValidPassword: Boolean get() = password.length >= PASSWORD_LENGTH
+
+    companion object {
+        const val PASSWORD_LENGTH = 6
+    }
 }
 
 sealed class NavigationState {
     data object None : NavigationState()
     data object NavigateToHome : NavigationState()
+    data object NavigateToRegister : NavigationState()
 }
