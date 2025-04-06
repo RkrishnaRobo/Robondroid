@@ -1,7 +1,7 @@
-package com.feature.home.presentation.di
+package com.feature.register.presentation.di
 
-import com.feature.home.presentation.state.register.RegisterReducer
-import com.feature.home.presentation.state.register.RegisterReducerImpl
+import com.feature.register.presentation.state.register.RegisterReducer
+import com.feature.register.presentation.state.register.RegisterReducerImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

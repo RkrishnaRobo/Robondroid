@@ -1,4 +1,4 @@
-package com.feature.register.ui.main.onboard.register
+package com.feature.register.ui.main
 
 import RegistrationState
 import androidx.compose.animation.AnimatedVisibility
@@ -41,9 +41,8 @@ import com.core.designsystem.component.common.HeaderWrapper
 import com.core.designsystem.component.textfield.DefaultTextField
 import com.core.designsystem.component.textfield.PasswordTextField
 import com.core.ui.component.loader.CommonLoader
-import com.feature.home.presentation.state.register.RegistrationAction
-import com.feature.home.presentation.viewmodel.RegisterScreenViewModel
-import com.feature.onboarding.ui.main.R
+import com.feature.register.presentation.state.register.RegistrationAction
+import com.feature.register.presentation.viewmodel.RegisterScreenViewModel
 
 @Composable
 fun RegisterScreen(

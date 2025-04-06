@@ -11,6 +11,7 @@ import io.ktor.http.HttpMethod
 import kotlinx.serialization.InternalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
+import javax.inject.Inject
 import kotlin.reflect.KClass
 
 class KtorNetworkService(private val client: HttpClient) : NetworkService {

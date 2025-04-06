@@ -1,4 +1,4 @@
-package com.feature.home.presentation.state.register
+package com.feature.register.presentation.state.register
 
 import RegistrationState
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -49,6 +49,7 @@ class RegisterReducerImpl @Inject constructor() : RegisterReducer {
             }
 
             RegistrationAction.OnAlreadyHaveAccountClick -> Unit
+            else -> Unit
         }
     }
 }

@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.feature.signin.ui.mobile"
+    namespace = "com.feature.home.ui.mobile"
 
 }
 

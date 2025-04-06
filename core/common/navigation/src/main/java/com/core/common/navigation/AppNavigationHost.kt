@@ -6,8 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import com.feature.home.ui.main.navigation.homeScreen
 import com.feature.home.ui.main.navigation.navigateToHome
-import com.feature.register.ui.main.onboard.register.navigation.navigateToRegister
-import com.feature.register.ui.main.onboard.register.navigation.registerScreen
+import com.feature.register.ui.main.navigation.navigateToRegister
+import com.feature.register.ui.main.navigation.registerScreen
 import com.feature.signin.ui.main.navigation.SignInScreenRoute
 import com.feature.signin.ui.main.navigation.navigateToSignIn
 import com.feature.signin.ui.main.navigation.signInScreen

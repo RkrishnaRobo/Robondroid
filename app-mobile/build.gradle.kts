@@ -52,4 +52,5 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(projects.core.designSystem)
     implementation(projects.core.common.navigation)
+    implementation(projects.core.data.onboarding)
 }

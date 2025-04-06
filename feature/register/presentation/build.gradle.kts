@@ -3,11 +3,10 @@ plugins {
 }
 
 android {
-    namespace = "com.feature.onboarding.presentation"
+    namespace = "com.feature.register.presentation"
 }
 
 dependencies {
     api(projects.core.common.general)
     implementation(projects.core.domain.onboarding)
-    implementation(projects.core.data.onboarding)
 }

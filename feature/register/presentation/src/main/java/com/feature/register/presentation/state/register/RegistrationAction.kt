@@ -1,4 +1,4 @@
-package com.feature.home.presentation.state.register
+package com.feature.register.presentation.state.register
 
 import com.core.common.state.Action
 

@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.feature.signin.ui.tv"
+    namespace = "com.feature.home.ui.tv"
 }
 
 dependencies {

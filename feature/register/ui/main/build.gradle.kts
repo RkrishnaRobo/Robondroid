@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.feature.onboarding.ui.main"
+    namespace = "com.feature.register.ui.main"
 }
 
 dependencies {

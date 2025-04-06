@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.feature.onboarding.ui.tv"
+    namespace = "com.feature.register.ui.tv"
 }
 
 dependencies {

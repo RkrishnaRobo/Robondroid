@@ -1,4 +1,4 @@
-package com.feature.home.presentation.viewmodel
+package com.feature.register.presentation.viewmodel
 
 import NavState
 import RegistrationState
@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.core.domain.onboarding.model.SignUpParams
 import com.core.domain.onboarding.usecase.SignUpUseCase
-import com.feature.home.presentation.state.register.RegisterReducer
-import com.feature.home.presentation.state.register.RegistrationAction
+import com.feature.register.presentation.state.register.RegisterReducer
+import com.feature.register.presentation.state.register.RegistrationAction
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -60,7 +60,6 @@ class RegisterScreenViewModel @Inject constructor(
             try {
                 signUpUseCase(SignUpParams(currentState.value.email, currentState.value.password))
                 reducer.update(RegistrationAction.RegistrationSuccess("userId"))
-                // _effect.emit(RegistrationEffect.NavigateToHome)
             } catch (ex: Exception) {
                 reducer.update(RegistrationAction.RegistrationFailed(ex.localizedMessage ?: "Registration failed"))
             }

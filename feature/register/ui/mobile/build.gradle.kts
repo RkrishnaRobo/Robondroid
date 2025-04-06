@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.feature.onboarding.ui.mobile"
+    namespace = "com.feature.register.ui.mobile"
 
 }
 
