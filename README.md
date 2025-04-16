@@ -62,7 +62,13 @@ This project will guide you through creating a comprehensive Android application
 
 - **Continuous Integration and Deployment** (CI/CD):
    - **GitHub Actions**: Automates testing, building, and deployment, streamlining development cycles.
-     
+
+### Architecture Overview
+
+![robondroid_arch](https://github.com/user-attachments/assets/00367924-e625-4a2e-b077-a4144737a35c)
+
+           
+
 ## Getting Started
 
 ### Prerequisites
